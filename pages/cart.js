@@ -1,10 +1,31 @@
 import Head from 'next/head'
 import ItemCard from '../components/ItemCard'
 import { useUser } from '../context/UserContext'
+import { useState } from 'react'
+import { ItemContext } from '../context/ItemContext'
+import { useItems } from '../context/ItemContext'
+
 
 export default function Checkout() {
+
   const { user, setUser } = useUser()
 
+  const { items, setItems } = useItems()
+
+//  const nameCatalog = items.map(jax => jax.name)
+  
+//  const displayCard = jax =>{
+//    if (nameCatalog.includes(jax)) {
+//      let item = items.filter(i => i.name == jax)
+//      return (
+//        <article className>
+//          <div className="img-wrapper">
+//            <img src={item[0].img}/>
+//          </div>
+//        </article>
+//      )
+//    }
+//  }
   return (
     <div>
       <Head>

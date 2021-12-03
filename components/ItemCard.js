@@ -7,7 +7,7 @@ export default function ItemCard({ name, img, stock, price, add }) {
         <div className="content">
         <h2 className="plant-name">{name}</h2>
         <p className="price">${price}</p>
-        <button onClick={() => add(name)} className={stock <= 0 ? 'disabled' : ''}>Add to Cart</button>
+        <button onClick={() => add(name)} className={stock <= 0 ? 'enabled' : ''}>Add to Cart</button>
         </div>
     </article>
 }
